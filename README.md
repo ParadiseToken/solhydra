@@ -19,16 +19,16 @@ these tools. After execution you are left with a number of files per tool, which
 and inspect one-by-one. Wouldn't it be nice if there was a tool which takes care of installing (in Docker containers)
 and executing all the analysis tools on a given directory with smart contracts + transforming the output
 of each tool (per smart contract) into 1 HTML report which you can open in the browser so you can easily
-inspect all output per smart contract. That's what this tool tries to accomplish 🎆.
+inspect all output per tool, per smart contract. That's what this tool tries to accomplish 🎆.
 
 Analysis tools included:
-- [`mythril`](https://github.com/ConsenSys/mythril)
-- [`oyente`](https://github.com/melonproject/oyente)
-- [`solgraph`](https://github.com/raineorshine/solgraph)
-- [`solhint`](https://github.com/protofire/solhint)
-- [`solidity-analyzer`](https://github.com/quantstamp/solidity-analyzer)
-- [`solidity-coverage`](https://github.com/sc-forks/solidity-coverage) (only works on `truffle` projects)
-- [`solium`](https://github.com/duaraghav8/Solium)
+- [`mythril`](https://github.com/ConsenSys/mythril) [Docker image](https://hub.docker.com/r/rmi7/solhydra_mythril/)
+- [`oyente`](https://github.com/melonproject/oyente) [Docker image](https://hub.docker.com/r/rmi7/solhydra_oyente/)
+- [`solgraph`](https://github.com/raineorshine/solgraph) [Docker image](https://hub.docker.com/r/rmi7/solhydra_solgraph/)
+- [`solhint`](https://github.com/protofire/solhint) [Docker image](https://hub.docker.com/r/rmi7/solhydra_solhint/)
+- [`solidity-analyzer`](https://github.com/quantstamp/solidity-analyzer) [Docker image](https://hub.docker.com/r/rmi7/solhydra_solidity-analyzer/)
+- [`solidity-coverage`](https://github.com/sc-forks/solidity-coverage) (only works on `truffle` projects) [Docker image](https://hub.docker.com/r/rmi7/solhydra_solidity-coverage/)
+- [`solium`](https://github.com/duaraghav8/Solium) [Docker image](https://hub.docker.com/r/rmi7/solhydra_solium/)
 
 ## Prerequisites
 

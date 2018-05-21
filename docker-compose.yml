@@ -1,61 +1,44 @@
 version: '3'
 
 services:
-
-  # not yet enabled, submitted issue: https://github.com/MAIAN-tool/MAIAN/issues/10
-  #
-  # maian:
-  #   build: ./tools/maian
-  #   volumes:
-  #     - ./workspace/input/:/app/input/
-  #     - ./workspace/output/maian:/app/output/
-
-  # not yet enabled, need to add manual "test" functions in solidity files
-  #
-  # echidna:
-  #   build: ./tools/echidna
-  #   volumes:
-  #     - ./workspace/input/:/app/input/
-  #     - ./workspace/output/echidna:/app/output/
-
   mythril:
-    build: ./tools/mythril
+    image: rmi7/solhydra_mythril:1.0
     volumes:
       - ./workspace/input/:/app/input/
       - ./workspace/output/mythril:/app/output/
 
   oyente:
-    build: ./tools/oyente
+    image: rmi7/solhydra_oyente:1.0
     volumes:
       - ./workspace/input/:/app/input/
       - ./workspace/output/oyente:/app/output/
 
   solhint:
-    build: ./tools/solhint
+    image: rmi7/solhydra_solhint:1.0
     volumes:
       - ./workspace/input/:/app/input/
       - ./workspace/output/solhint:/app/output/
 
   solidity-coverage:
-    build: ./tools/solidity-coverage
+    image: rmi7/solhydra_solidity-coverage:1.0
     volumes:
       - ./workspace/input/:/app/input/
       - ./workspace/output/solidity-coverage:/app/output/
 
   solidity-analyzer:
-    build: ./tools/solidity-analyzer
+    image: rmi7/solhydra_solidity-analyzer:1.0
     volumes:
       - ./workspace/input/:/app/input/
       - ./workspace/output/solidity-analyzer:/app/output/
 
   solgraph:
-    build: ./tools/solgraph
+    image: rmi7/solhydra_solgraph:1.0
     volumes:
       - ./workspace/input/:/app/input/
       - ./workspace/output/solgraph:/app/output/
 
   solium:
-    build: ./tools/solium
+    image: rmi7/solhydra_solium:1.0
     volumes:
       - ./workspace/input/:/app/input/
       - ./workspace/output/solium:/app/output/

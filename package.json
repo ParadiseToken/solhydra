@@ -1,6 +1,6 @@
 {
   "name": "solhydra",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "cli tool to run solidity smart contract(s) through several analysis tools and generating a html report",
   "bin": "./lib/index.js",
   "repository": {
