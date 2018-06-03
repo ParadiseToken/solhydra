@@ -16,6 +16,7 @@
   "dependencies": {
     "copy-dir": "^0.3.0",
     "escape-html": "^1.0.3",
+    "git-clone": "^0.1.0",
     "mkdirp": "^0.5.1",
     "pug": "^2.0.0-rc.4",
     "rimraf": "^2.6.2",
