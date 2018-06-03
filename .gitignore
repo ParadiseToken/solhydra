@@ -60,4 +60,4 @@ typings/
 # <3 Mac OS
 .DS_Store
 
-workspace
+.workspaces
