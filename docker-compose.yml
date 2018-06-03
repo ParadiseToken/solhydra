@@ -31,11 +31,15 @@ services:
       - ./workspace/input/:/app/input/
       - ./workspace/output/solidity-analyzer:/app/output/
 
-  solgraph:
-    image: rmi7/solhydra_solgraph:1.0
+  surya:
+    image: rmi7/solhydra_surya:1.2
     volumes:
       - ./workspace/input/:/app/input/
-      - ./workspace/output/solgraph:/app/output/
+      - ./workspace/output/surya_graph:/app/output/graph/
+      - ./workspace/output/surya_describe:/app/output/describe/
+      - ./workspace/output/surya_parse:/app/output/parse/
+      - ./workspace/output/surya_ftrace:/app/output/ftrace/
+      - ./workspace/output/surya_inheritance:/app/output/inheritance/
 
   solium:
     image: rmi7/solhydra_solium:1.0

@@ -70,7 +70,7 @@ html
                 ul
                   each val, toolOutputName in toolOutputs[contractName]
                     li
-                      a(class="contract-tab-nav-button"  href='#contract-content-' + fileOutputs[contractName].slug + '-output-' + toolOutputName) #{toolOutputName}
+                      a(class="contract-tab-nav-button"  href='#contract-content-' + fileOutputs[contractName].slug + '-output-' + toolOutputName) #{toolOutputName.replace(/_/g, ' ')}
 
               .contract-tab-content-container
                 each contractContent, contractContentName in fileOutputs[contractName].content
