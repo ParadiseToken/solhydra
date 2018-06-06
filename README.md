@@ -42,6 +42,12 @@ node version `>= 8.0.0`
 
 `npm install -g solhydra`
 
+## One line sample execution
+
+```
+npx solhydra@1.0.0 --git=git@github.com:dapperlabs/cryptokitties-bounty.git --dest-file=~/solhydra-cryptokitties-bounty
+```
+
 ## Usage
 
 ```
