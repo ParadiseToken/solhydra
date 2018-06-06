@@ -89,7 +89,7 @@ To display help (the above shown excerpt) type: `solhydra`.
 #### soljitsu flatten
 
 The smart contracts are run through [`soljitsu flatten`](https://github.com/BlockChainCompany/soljitsu#feature-flatten),
-since some analysis tools don't work with node_modules dependencies. So to keep reports consistent **all** tools are
+since some analysis tools don't work with `node_modules`/`installed_contracts` dependencies. So to keep reports consistent the tools are
 executed on the `flatten` version of the smart contracts.
 
 #### html report
@@ -109,4 +109,4 @@ executed on the `flatten` version of the smart contracts.
 
 ## License
 
-MIT
+GPL-3.0
