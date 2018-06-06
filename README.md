@@ -24,7 +24,7 @@ inspect all output per tool, per smart contract. That's what this tool tries to 
 Analysis tools included:
 - [`mythril`](https://github.com/ConsenSys/mythril) [Docker image](https://hub.docker.com/r/rmi7/solhydra_mythril/)
 - [`oyente`](https://github.com/melonproject/oyente) [Docker image](https://hub.docker.com/r/rmi7/solhydra_oyente/)
-- [`solgraph`](https://github.com/raineorshine/solgraph) [Docker image](https://hub.docker.com/r/rmi7/solhydra_solgraph/)
+- [`surya`](https://github.com/ConsenSys/surya) [Docker image](https://hub.docker.com/r/rmi7/solhydra_surya/)
 - [`solhint`](https://github.com/protofire/solhint) [Docker image](https://hub.docker.com/r/rmi7/solhydra_solhint/)
 - [`solidity-analyzer`](https://github.com/quantstamp/solidity-analyzer) [Docker image](https://hub.docker.com/r/rmi7/solhydra_solidity-analyzer/)
 - [`solidity-coverage`](https://github.com/sc-forks/solidity-coverage) (only works on `truffle` projects) [Docker image](https://hub.docker.com/r/rmi7/solhydra_solidity-coverage/)
