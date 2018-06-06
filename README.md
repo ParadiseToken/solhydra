@@ -50,11 +50,11 @@ NAME
                   tools and generating a html report
 
 SYNOPSIS
-  solhydra --contract-dir=dirPath --dest-dir=dirPath [--dep-dir=dirPath] [tool1, tool2, ..]
+  solhydra --contract-dir=dirPath --dest-dir=dirPath [--npm-dir=dirPath --ethpm-dir=dirPath] [tool1, tool2, ..]
   solhydra --truffle=dirPath --dest-dir=dirPath [tool1, tool2, ..]
 
 TOOLS
-  mythril, oyente, solhint, solidity-coverage, solidity-analyzer, solgraph, solium
+  mythril, oyente, solhint, solidity-coverage, solidity-analyzer, surya, solium
 
 REQUIRED ARGUMENTS
   --contract-dir  path of contracts directory (only when not specifying --truffle)
@@ -63,20 +63,23 @@ REQUIRED ARGUMENTS
                   will be named solhydra_report.html
 
 OPTIONAL ARGUMENTS
-  --dep-dir      path of directory with dependencies (node_modules),
-                 only used with --contract-dir
-  tool           you can optionally specify a subset of tools to run, if you don't
-                 specify any tools, all tools will be executed
+  --npm-dir       path of the directory with the NPM dependencies
+                  only used with --contract-dir
+  --ethpm-dir     path of the directory with the EthPM dependencies
+                  only used with --contract-dir
+ tool             you can optionally specify a subset of tools to run, if you don't
+                  specify any tools, all tools will be executed
 
 NOTES
   solidity-coverage only works on truffle projects, so only when using --truffle,
   it will be skipped automatically for non-truffle runs
 
 EXAMPLES
-  solhydra --contract-dir=./contracts --dep-dir=./node_modules --dest-dir=./out
-  solhydra --contract-dir=./contracts --dep-dir=./node_modules --dest-dir=./out mythril oyente
+  solhydra --contract-dir=./contracts --npm-dir=./node_modules --dest-dir=./out
+  solhydra --contract-dir=./contracts --ethpm-dir=./installed_contracts --dest-dir=./out mythril oyente
   solhydra --truffle=./mytruffleproject --dest-dir=./out
   solhydra --truffle=./mytruffleproject --dest-dir=./out solidity-coverage solium
+  solhydra --git=git@github.com:dapperlabs/cryptokitties-bounty.git --dest-dir=./out surya mythril
 ```
 
 To display help (the above shown excerpt) type: `solhydra`.
