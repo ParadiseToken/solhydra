@@ -50,24 +50,24 @@ NAME
                   tools and generating a html report
 
 SYNOPSIS
-  solhydra --contract-dir=dirPath --dest-dir=dirPath [--npm-dir=dirPath --ethpm-dir=dirPath] [tool1, tool2, ..]
-  solhydra --truffle=dirPath --dest-dir=dirPath [tool1, tool2, ..]
+  solhydra --contract-dir=dirPath --dest-file=dirPath [--npm-dir=dirPath --ethpm-dir=dirPath] [tool1, tool2, ..]
+  solhydra --truffle=dirPath --dest-file=filePath [tool1, tool2, ..]
+  solhydra --git=gitUrl --dest-file=filePath [tool1, tool2, ..]
 
 TOOLS
-  mythril, oyente, solhint, solidity-coverage, solidity-analyzer, surya, solium
+  mythril, oyente, surya, solidity-coverage, solidity-analyzer, solhint, solium
 
 REQUIRED ARGUMENTS
   --contract-dir  path of contracts directory (only when not specifying --truffle)
   --truffle       path of truffle project (only when not specifying --contract-dir)
-  --dest-dir      path of the directory to write the result HTML report to,
-                  will be named solhydra_report.html
+  --dest-file     path of the file to write the result HTML report to
 
 OPTIONAL ARGUMENTS
   --npm-dir       path of the directory with the NPM dependencies
                   only used with --contract-dir
   --ethpm-dir     path of the directory with the EthPM dependencies
                   only used with --contract-dir
- tool             you can optionally specify a subset of tools to run, if you don't
+  tool            you can optionally specify a subset of tools to run, if you don't
                   specify any tools, all tools will be executed
 
 NOTES
@@ -75,11 +75,11 @@ NOTES
   it will be skipped automatically for non-truffle runs
 
 EXAMPLES
-  solhydra --contract-dir=./contracts --npm-dir=./node_modules --dest-dir=./out
-  solhydra --contract-dir=./contracts --ethpm-dir=./installed_contracts --dest-dir=./out mythril oyente
-  solhydra --truffle=./mytruffleproject --dest-dir=./out
-  solhydra --truffle=./mytruffleproject --dest-dir=./out solidity-coverage solium
-  solhydra --git=git@github.com:dapperlabs/cryptokitties-bounty.git --dest-dir=./out surya mythril
+  solhydra --contract-dir=./contracts --npm-dir=./node_modules --dest-file=./out
+  solhydra --contract-dir=./contracts --ethpm-dir=./installed_contracts --dest-file=./out mythril oyente
+  solhydra --truffle=./mytruffleproject --dest-file=./out
+  solhydra --truffle=./mytruffleproject --dest-file=./out solidity-coverage solium
+  solhydra --git=git@github.com:dapperlabs/cryptokitties-bounty.git --dest-file=./out surya mythril
 ```
 
 To display help (the above shown excerpt) type: `solhydra`.
